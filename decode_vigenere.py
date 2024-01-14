@@ -26,7 +26,7 @@ def decode_message(message_to_decode, keyword):
       if char.isalpha():
          message_index = reference.index(char)
          keyword_message_index = reference.index(keyword_message[i]) 
-         result_index = (message_index + keyword_message_index) % 26
+         result_index = (message_index - keyword_message_index) % 26
          decoded_message += reference[result_index]
       else:
          decoded_message += char
